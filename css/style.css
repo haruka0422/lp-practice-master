@@ -11,6 +11,7 @@ body {
 /* 共通inner */
 .inner {
   max-width: 1100px; /* PC時 */
+  margin: 0 auto; /* 中央寄せ */
 }
 
 /* ヘッダー */
@@ -48,6 +49,7 @@ body {
 .hero {
   background: url("../img/keyvisual/keyvisual.jpg") no-repeat center/cover;
   height: 800px;
+  background-position: top;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,6 +63,11 @@ body {
   font-size: 40px;
   font-weight: 700;
   color: #ffffff;
+}
+
+.hero-image {
+  width: 100vw;
+  height: 100vh;
 }
 
 /* WORK */
@@ -81,7 +88,6 @@ body {
 }
 .work-text h2 {
   font-size: 65px;
-  color: #6ba7eb;
   margin-bottom: 30px;
 }
 .work-text p {
