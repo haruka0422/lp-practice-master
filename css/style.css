@@ -82,13 +82,12 @@ body {
   gap: 80px;
 }
 .work-image img {
-  width: 400px;
-  height: 400px;
+  width: 250px;
   object-fit: cover;
 }
 .work-text h2 {
-  font-size: 65px;
-  margin-bottom: 30px;
+  font-size: 40px;
+  letter-spacing: 10px;
 }
 .work-text p {
   font-size: 18px;
@@ -104,7 +103,7 @@ body {
 }
 .skills h2 {
   font-size: 40px;
-  margin-bottom: 50px;
+  letter-spacing: 10px;
 }
 .skills-grid {
   display: grid;
@@ -121,42 +120,95 @@ body {
 /* PLAN */
 .plan {
   background: #d0dfea;
-  padding: 80px 0;
+  padding: 50px 20px;
+  text-align: center;
 }
+
 .plan h2 {
   font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 3px;
   margin-bottom: 50px;
+  color: #333;
 }
+
+/* テーブル全体 */
 .plan table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 16px;
+  line-height: 26px;
   background: #fff;
 }
+
+/* セル共通 */
 .plan th,
 .plan td {
-  border: 1px solid #ccc;
-  padding: 20px;
-  text-align: center;
+  border: 1px solid #fff;
+  padding: 10px;
+  text-align: center; /* ← 全部中央揃え */
+  vertical-align: middle;
+}
+
+/* 左列（項目名）を太字にする */
+.plan th:first-child,
+.plan td:first-child {
+  font-weight: bold;
+}
+
+/* ヘッダー行（PLAN行） */
+.plan thead th {
+  background: #6ba7eb;
+  font-weight: bold;
+}
+
+/* STANDARD PLAN の左境界線 */
+.plan thead th:nth-child(3),
+.plan tbody td:nth-child(3) {
+  border-left: 2px solid #fff;
+}
+
+/* PRICE行 */
+.plan tbody tr:nth-child(1) td {
+  background: #f9f9f9;
+}
+
+/* DELIVERY行 */
+.plan tbody tr:nth-child(2) td {
+  background: #e0efff;
+}
+
+/* IMPROVEMENT行 */
+.plan tbody tr:nth-child(4) td {
+  background: #e0efff;
 }
 
 /* SNS */
 .sns {
-  background: #f9f9f9;
-  padding: 40px 0;
+  background: #e3f2fd;
+  padding: 50px 0;
 }
 .sns a {
-  margin: 0 20px;
-  font-size: 30px;
-  color: #888;
+  margin: 0 92px; /* アイコン間隔を調整（合計で185px相当） */
+  font-size: 40px;
+  color: #8c8c8c;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
   text-decoration: none;
 }
 
 /* フッター */
 .footer {
-  background: #e3f2fd;
-  padding: 30px 0;
+  background: #cfd8dc;
+  padding: 20px 0;
+  text-align: center;
 }
 .footer p {
-  font-size: 14px;
-  color: #666;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: #333;
 }
