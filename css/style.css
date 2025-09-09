@@ -45,7 +45,7 @@ body {
   background-color: #5a93d1;
 }
 
-/* メインビジュアル */
+/* Hero セクション */
 .hero {
   background: url("../img/keyvisual/keyvisual.jpg") no-repeat center/cover;
   padding: 400px 0;
@@ -189,7 +189,6 @@ body {
 .plan tbody tr:nth-child(4) td {
   background: #e0efff;
 }
-
 /* SNS */
 .sns {
   background: #e3f2fd;
@@ -241,9 +240,9 @@ body {
    =========================== */
 @media (max-width: 767px) {
   .inner {
-    width: 97%; /* 指定があった「SP/TABは97%」にする */
-    padding: 10px 0px; /* 左右に余白を追加して内側に */
+    max-width: 97%; /* 指定があった「SP/TABは97%」にする */
     box-sizing: border-box; /* padding込みで幅を計算 */
+    margin: 0 auto;
   }
   /* ヘッダー */
   /* Contactボタンは非表示 */
@@ -321,7 +320,6 @@ body {
 
   .work-text {
     text-align: center; /* 見出しと文章を中央寄せ */
-    padding: 0 15px; /* 左右に余白を入れて読みやすく */
   }
 
   .work-text h2 {
@@ -333,7 +331,7 @@ body {
     font-size: 15px;
     word-break: break-all;
     text-align: center;
-    padding: 35px;
+    padding: 35px 0;
   }
   /* SKILLS */
   .skills {
@@ -354,7 +352,12 @@ body {
   .skills img {
     width: 300px;
     height: 300px;
+    display: block;
   }
+  .skills img:nth-child(3n) {
+    padding-bottom: 100px;
+  }
+
   /* PLAN */
   .plan {
     background: #d0dfea;
@@ -373,7 +376,7 @@ body {
     font-size: 14px;
     line-height: 22px;
   }
-  .plan tbody td {
+  .plan tdody td {
     font-size: 12px;
   }
 
@@ -383,11 +386,146 @@ body {
   }
   .sns-inner {
     flex-direction: column;
-    gap: 50px;
     width: 100%;
+    gap: 0;
   }
   .sns-item {
     font-size: 40px;
+    padding: 50px;
+  }
+
+  /* Footer */
+  .footer-inner {
+    text-align: right;
+    padding-right: 10px;
+  }
+}
+
+/* ===========================
+   TAB版 (max-width: 1199px)
+   =========================== */
+@media (max-width: 1199px) {
+  /* 共通inner → 横幅97%に */
+  .inner {
+    width: 97%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  /* ヘッダー */
+  .btn-contact {
+    font-size: 11px;
+    padding: 10px 12px;
+  }
+
+  /* Hero セクション */
+  .hero {
+    background: url("../img/keyvisual/keyvisual.jpg") no-repeat center/cover;
+    padding: 250px 0; /* 上下250px余白 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 65px; /* PCより小さめ、SPより大きめ */
+    font-weight: 700;
+    color: #6ba7eb; /* 青色 */
+    margin: 0px; /* 下余白 */
+  }
+
+  .hero-text p {
+    font-size: 40px; /* サブ見出し */
+    font-weight: 700;
+    color: #fff; /* 白色 */
+    margin: 0;
+  }
+
+  /* WORK → 横並び解除して縦並びに */
+  .work-inner {
+    display: block; /* ← flex解除 */
+    text-align: center; /* 中央揃え */
+  }
+
+  .work-image img {
+    width: 70%; /* 画面幅の7割 */
+    max-width: 250px;
+    margin: 0 auto; /* 中央寄せ */
+    display: block;
+  }
+
+  .work-text h2 {
+    font-size: 45px;
+    padding-top: 20px;
+  }
+
+  .work-text p {
+    font-size: 15px;
+    word-break: break-all;
+    text-align: center;
+    padding: 35px 0;
+  }
+
+  /* SKILLS */
+  .skills {
+    background: #fff;
+    text-align: center;
+  }
+
+  .skills h2 {
+    font-size: 28px;
+    letter-spacing: 6px;
+    margin-bottom: 30px;
+  }
+
+  .skills-grid {
+    display: block; /* PCのgridを解除して縦並びに */
+  }
+
+  .skills img {
+    width: 300px;
+    height: 300px;
+    display: block;
+  }
+  .skills img:nth-child(3n) {
+    padding-bottom: 100px;
+  }
+
+  /* PLAN */
+  .plan {
+    background: #d0dfea;
+    padding: 50px 0px;
+    text-align: center;
+  }
+
+  .plan h2 {
+    font-size: 50px;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+    color: #333;
+  }
+
+  .plan thead th {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .plan tdody td {
+    font-size: 12px;
+  }
+
+  /* SNS */
+  .sns {
+    padding: 50px 15px;
+  }
+  .sns-inner {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+  .sns-item {
+    font-size: 40px;
+    padding: 50px;
   }
 
   /* Footer */
