@@ -8,6 +8,9 @@ body {
   text-align: center;
 }
 
+.nav-toggle {
+  display: none;
+}
 /* 共通inner */
 .inner {
   max-width: 1100px; /* PC時 */
@@ -420,8 +423,9 @@ body {
   }
 
   /* ハンバーガーメニュー */
+
   .nav-toggle {
-    display: flex; /* flexで縦並び */
+    display: flex; /*flexで縦並び */
     flex-direction: column;
     justify-content: center;
     align-items: center;
