@@ -1,247 +1,248 @@
 @charset "utf-8";
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fff;
-  color: #333;
-  text-align: center;
+  margin: 0; /* 既定の余白を消す（全幅レイアウトのズレ防止） */
+  font-family: Arial, sans-serif; /* フォントの指定（Arialなければsans-serif） */
+  background: #fff; /* 背景色を白に */
+  color: #333; /* 文字色の基本をやや濃いグレーに */
+  text-align: center; /* テキストを中央揃え（ページ全体の初期値） */
 }
 
 .nav-toggle {
-  display: none;
+  display: none; /* 初期は非表示（SPで表示） */
 }
+
 /* 共通inner */
 .inner {
-  max-width: 1100px; /* PC時 */
-  margin: 0 auto; /* 中央寄せ */
+  max-width: 1100px; /* PC時のコンテンツ最大幅 */
+  margin: 0 auto; /* 左右中央寄せ */
 }
 
 /* ヘッダー */
 .header {
-  background: #fff;
+  background: #fff; /* ヘッダー背景を白に */
 }
 
 .header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0;
+  display: flex; /* ロゴとボタンを横並びに */
+  justify-content: space-between; /* 左右端に振り分ける */
+  align-items: center; /* 縦方向の中央揃え */
+  padding: 15px 0; /* 上下に余白を持たせる */
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  font-weight: bold;
+  display: flex; /* アイコンとテキストを横並びに */
+  align-items: center; /* 縦中央揃え */
+  font-size: 20px; /* ロゴ文字サイズ */
+  font-weight: bold; /* ロゴ文字を太字に */
 }
 
 .logo i {
-  color: #777;
+  color: #777; /* アイコン色をグレーに */
 }
 
 .btn-contact {
-  background: #6ba7eb;
-  color: #fff;
-  padding: 12px 14px;
-  font-size: 12px;
-  text-decoration: none;
+  background: #6ba7eb; /* 背景色（青系） */
+  color: #fff; /* 文字色：白 */
+  padding: 12px 14px; /* 余白（ボタンサイズ調整） */
+  font-size: 12px; /* 文字サイズ */
+  text-decoration: none; /* リンクの下線を消す */
 }
 
 .btn-contact:hover {
-  color: #333;
-  transition: 0.3s;
+  color: #333; /* ホバー時の文字色（濃いグレー） */
+  transition: 0.3s; /* 変化を0.3秒で滑らかに（本来は通常状態側に書くのがベター） */
 }
 
 /* Hero セクション */
 .hero {
-  background: url("../img/keyvisual/keyvisual.jpg") no-repeat center/cover;
-  padding: 400px 0;
-  background-position: top;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: url("../img/keyvisual/keyvisual.jpg") no-repeat center/cover; /* 背景画像：繰り返しなし・中央・coverで拡大縮小 */
+  padding: 400px 0; /* 上下に大きな余白で縦高さを作る */
+  background-position: top; /* 画像の表示基準を上側に */
+  display: flex; /* テキストを中央に配置するためにflex化 */
+  align-items: center; /* 縦方向の中央揃え */
+  justify-content: center; /* 横方向の中央揃え */
 }
 
 .hero-text h1 {
-  color: #6ba7eb;
-  font-size: 65px;
-  font-weight: 700;
-  padding-bottom: 30px;
+  color: #6ba7eb; /* 見出しカラー（青） */
+  font-size: 65px; /* 見出しサイズ（大） */
+  font-weight: 700; /* 太字 */
+  padding-bottom: 30px; /* 見出し下の余白 */
 }
 
 .hero-text p {
-  font-size: 40px;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 40px; /* サブ見出しサイズ */
+  font-weight: 700; /* 太字 */
+  color: #ffffff; /* 文字色：白 */
 }
 
 .hero-image {
-  width: 100%;
-  height: 100%;
+  width: 100%; /* 画像の幅を親いっぱいに */
+  height: 100%; /* 高さも親いっぱいに */
 }
 
 /* WORK */
 .work {
-  background: #e3f2fd;
-  padding-top: 50px;
-  /* padding: 80px 0; */
+  background: #e3f2fd; /* セクション背景（薄い水色） */
+  padding-top: 50px; /* 上に余白 */
+  /* padding: 80px 0;  全体余白にしたい場合の候補 */
 }
 .work-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* gap: 80px; */
+  display: flex; /* 画像とテキストを横並びに */
+  align-items: center; /* 縦方向の中央揃え */
+  justify-content: center; /* コンテンツを中央へ寄せる */
+  /* gap: 80px;  要素間のすき間を空けたい場合 */
 }
 
 .work-image {
-  /* 親でセンタリングしておくと安定します */
-  display: flex;
-  justify-content: center;
+  display: flex; /* 画像ボックスをflexで */
+  justify-content: center; /* 画像を中央寄せ */
 }
 
 .work-image img {
-  width: 250px;
-  display: block;
-  padding-left: 250px;
+  width: 250px; /* 画像の横幅 */
+  display: block; /* 画像の下の隙間対策（inline要素の行間を消す） */
+  padding-left: 250px; /* 左側に余白（レイアウト調整） */
 }
 .work-text h2 {
-  font-size: 40px;
-  letter-spacing: 10px;
-  padding-top: 20px;
+  font-size: 40px; /* 見出しサイズ */
+  letter-spacing: 10px; /* 文字間隔を広げる */
+  padding-top: 20px; /* 見出し上の余白 */
 }
 .work-text p {
-  font-size: 15px;
-  line-height: 18px;
-  word-break: break-all;
-  text-align: center;
-  padding: 35px 150px 35px 100px;
+  font-size: 15px; /* 本文文字サイズ */
+  line-height: 18px; /* 行間 */
+  word-break: break-all; /* 行の途中でも改行（長い英単語対策） */
+  text-align: center; /* 文章中央揃え */
+  padding: 35px 150px 35px 100px; /* 上 右 下 左 の内側余白 */
 }
 
 /* SKILLS */
 .skills {
-  background: #fff;
-  padding-bottom: 70px;
+  background: #fff; /* 背景白 */
+  padding-bottom: 70px; /* 下に余白 */
 }
 .skills h2 {
-  font-size: 40px;
-  letter-spacing: 10px;
-  padding: 50px;
+  font-size: 40px; /* 見出しサイズ */
+  letter-spacing: 10px; /* 文字間隔を広げる */
+  padding: 50px; /* 内側余白（上下左右） */
 }
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 100px;
-  justify-items: center;
+  display: grid; /* 画像をグリッドで配置 */
+  grid-template-columns: repeat(3, 1fr); /* 3列均等幅 */
+  gap: 100px; /* 要素間のすき間 */
+  justify-items: center; /* 各セル内で中央寄せ */
 }
 .skills img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  opacity: 0.7;
+  width: 300px; /* 画像幅 */
+  height: 300px; /* 画像高さ（正方形） */
+  object-fit: cover; /* アスペクト比を保ちつつトリミング */
+  opacity: 0.7; /* やや薄く（ホバーで強調させる狙い） */
 }
 
 .skills img:hover {
-  opacity: 1;
+  opacity: 1; /* ホバー時は不透明＝強調 */
 }
 
 /* PLAN */
 .plan {
-  background: #d0dfea;
-  padding: 50px 20px;
-  text-align: center;
+  background: #d0dfea; /* セクション背景（淡い青） */
+  padding: 50px 20px; /* 上下左右の内側余白 */
+  text-align: center; /* テキスト中央揃え */
 }
 
 .plan h2 {
-  font-size: 50px;
-  font-weight: bold;
-  letter-spacing: 6px;
-  margin-bottom: 50px;
-  color: #333;
+  font-size: 50px; /* 見出しサイズ（大） */
+  font-weight: bold; /* 太字 */
+  letter-spacing: 6px; /* 文字間隔 */
+  margin-bottom: 50px; /* 下余白 */
+  color: #333; /* 文字色 */
 }
 
 /* テーブル全体 */
 .plan table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 16px;
-  line-height: 26px;
-  background: #fff;
-  table-layout: fixed;
+  width: 100%; /* テーブルを親幅いっぱいに */
+  border-collapse: collapse; /* セルの隙間をなくす */
+  font-size: 16px; /* 文字サイズ */
+  line-height: 26px; /* 行の高さ */
+  background: #fff; /* テーブル背景白 */
+  table-layout: fixed; /* 列幅を均等に・長文でも崩れにくく */
 }
 
 /* セル共通 */
 .plan th,
 .plan td {
-  border: 1px solid #fff;
-  padding: 10px;
-  text-align: center; /* ← 全部中央揃え */
-  vertical-align: middle;
+  border: 1px solid #fff; /* セルの境界線（白） */
+  padding: 10px; /* セル内余白 */
+  text-align: center; /* 文字の中央揃え */
+  vertical-align: middle; /* 縦方向の中央揃え */
 }
 
 /* 左列（項目名）を太字にする */
 .plan th:first-child,
 .plan td:first-child {
-  font-weight: bold;
+  font-weight: bold; /* 1列目だけ太字 */
 }
 
 /* ヘッダー行（PLAN行） */
 .plan thead th {
-  background: #6ba7eb;
-  font-weight: bold;
+  background: #6ba7eb; /* 見出し行の背景を青に */
+  font-weight: bold; /* 太字 */
 }
 
-/* STANDARD PLAN の左境界線 */
+/* STANDARD PLAN の左境界線を強調 */
 .plan thead th:nth-child(3),
 .plan tbody td:nth-child(3) {
-  border-left: 2px solid #fff;
+  border-left: 2px solid #fff; /* 3列目の左枠線を太くする */
 }
 
 /* PRICE行 */
 .plan tbody tr:nth-child(1) td {
-  background: #f9f9f9;
+  background: #f9f9f9; /* 1行目の背景を薄いグレーに */
 }
 
 /* DELIVERY行 */
 .plan tbody tr:nth-child(2) td {
-  background: #e0efff;
+  background: #e0efff; /* 2行目の背景を薄い水色に */
 }
 
 /* IMPROVEMENT行 */
 .plan tbody tr:nth-child(4) td {
-  background: #e0efff;
+  background: #e0efff; /* 4行目の背景を薄い水色に */
 }
+
 /* SNS */
 .sns {
-  background: #e3f2fd;
-  padding: 200px; /* 上下200px余白 */
+  background: #e3f2fd; /* 背景（薄い水色） */
+  padding: 200px; /* 全方向に大きめの余白 */
 }
 
 .sns-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* アイコンを横並び */
+  justify-content: center; /* 中央揃え */
+  align-items: center; /* 縦中央揃え */
 }
 
 .sns-item {
-  color: #8c8c8c;
-  overflow: hidden;
-  font-size: 40px;
-  text-decoration: none;
-  display: inline-block;
-  padding: 25px; /* 基本は25px間隔 */
-  width: 185px;
+  color: #8c8c8c; /* アイコン色 */
+  overflow: hidden; /* はみ出し非表示（ホバー演出用に） */
+  font-size: 40px; /* アイコンサイズ */
+  text-decoration: none; /* リンク下線を消す */
+  display: inline-block; /* 余白や幅を指定しやすく */
+  padding: 25px; /* クリック領域を広げるための内側余白 */
+  width: 185px; /* 各アイコンボックスの幅 */
 }
 
 .sns-item:hover {
-  transition: 0.5s;
-  background: #fff;
+  transition: 0.5s; /* 0.5秒で滑らかに変化（通常側に置くのが望ましい） */
+  background: #fff; /* ホバー時に背景白で反転風に */
 }
 
 /* フッター */
 .footer {
-  background: #cfd8dc; /* 背景色 */
-  padding: 20px 0 25px; /* 上20px 下25px */
+  background: #cfd8dc; /* 背景色（グレー） */
+  padding: 20px 0 25px; /* 上20・下25の内側余白 */
 }
 
 .footer-inner {
@@ -249,161 +250,160 @@ body {
 }
 
 .footer-inner p {
-  font-size: 10px; /* フォントサイズ */
-  letter-spacing: 0.5px; /* 文字間隔 */
-  margin: 0; /* デフォルト余白を消す */
+  font-size: 10px; /* 文字サイズ小さめ */
+  letter-spacing: 0.5px; /* 文字間隔を少し広く */
+  margin: 0; /* pタグのデフォルト余白を消す */
 }
 
 /* ===========================
    TAB版 (max-width: 1199px)
    =========================== */
-
 @media (max-width: 1199px) {
   /* 共通inner → 横幅97%に */
   .inner {
-    max-width: 97%;
-    box-sizing: border-box;
+    max-width: 97%; /* ビューポートの97%幅に */
+    box-sizing: border-box; /* paddingやborder込みで計算 */
   }
 
   /* ヘッダー */
   .btn-contact {
-    font-size: 11px;
-    padding: 10px 12px;
+    font-size: 11px; /* 文字を少し小さく */
+    padding: 10px 12px; /* ボタンの余白を微調整 */
   }
 
   .btn-contact:hover {
-    color: #333;
-    transition: 0.3s;
+    color: #333; /* ホバー時の文字色（明確化） */
+    transition: 0.3s; /* 変化を滑らかに（通常側に置くのがベター） */
   }
 
   /* Hero セクション */
   .hero {
-    background: url("../img/keyvisual/keyvisual.jpg") no-repeat center/cover;
-    padding: 250px 0; /* 上下250px余白 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    background: url("../img/keyvisual/keyvisual.jpg") no-repeat center/cover; /* 背景を維持 */
+    padding: 250px 0; /* 高さを少し抑える */
+    display: flex; /* 中央配置維持 */
+    align-items: center; /* 縦中央 */
+    justify-content: center; /* 横中央 */
+    text-align: center; /* テキスト中央 */
   }
 
   .hero-text h1 {
-    font-size: 65px; /* PCより小さめ、SPより大きめ */
-    font-weight: 700;
+    font-size: 65px; /* PCよりやや小さめ */
+    font-weight: 700; /* 太字 */
     color: #6ba7eb; /* 青色 */
-    margin: 0px; /* 下余白 */
+    margin: 0px; /* 不要な余白をなくす */
   }
 
   .hero-text p {
-    font-size: 40px; /* サブ見出し */
-    font-weight: 700;
+    font-size: 40px; /* サブ見出しサイズ */
+    font-weight: 700; /* 太字 */
     color: #fff; /* 白色 */
-    margin: 0;
+    margin: 0; /* 余白リセット */
   }
 
   /* WORK → 横並び解除して縦並びに */
   .work-inner {
-    display: block; /* ← flex解除 */
-    text-align: center; /* 中央揃え */
+    display: block; /* flex解除 → 縦積み */
+    text-align: center; /* コンテンツ中央揃え */
   }
 
   .work-image img {
     width: 70%; /* 画面幅の7割 */
-    max-width: 250px;
+    max-width: 250px; /* 画像の最大幅 */
     margin: 0 auto; /* 中央寄せ */
-    display: block;
-    padding-left: 0;
+    display: block; /* ブロック化して中央寄せしやすく */
+    padding-left: 0; /* 左余白をリセット */
   }
 
   .work-text h2 {
-    font-size: 45px;
-    padding-top: 20px;
+    font-size: 45px; /* 見出し拡大 */
+    padding-top: 20px; /* 上余白 */
   }
 
   .work-text p {
-    font-size: 15px;
-    word-break: break-all;
-    text-align: center;
-    padding: 35px 0 50px 0;
+    font-size: 15px; /* 本文サイズ */
+    word-break: break-all; /* 長単語改行 */
+    text-align: center; /* 中央 */
+    padding: 35px 0 50px 0; /* 上 右 下 左 */
   }
 
   /* SKILLS */
   .skills {
-    background: #fff;
-    text-align: center;
+    background: #fff; /* 背景白 */
+    text-align: center; /* テキスト中央 */
   }
 
   .skills h2 {
-    font-size: 40px;
-    letter-spacing: 10px;
-    margin-bottom: 30px;
+    font-size: 40px; /* 見出しサイズ */
+    letter-spacing: 10px; /* 文字間隔 */
+    margin-bottom: 30px; /* 下余白 */
   }
 
   .skills-grid {
-    display: block; /* PCのgridを解除して縦並びに */
+    display: block; /* グリッド解除 → 縦並び */
   }
 
   .skills img {
-    width: 300px;
-    height: 300px;
-    display: block;
-    opacity: 0.7;
+    width: 300px; /* 画像幅 */
+    height: 300px; /* 高さ */
+    display: block; /* 余白対策 */
+    opacity: 0.7; /* 透明度 */
   }
 
   .skills img:hover {
-    opacity: 1;
+    opacity: 1; /* ホバーで濃く */
   }
 
   .skills img:nth-child(3n) {
-    padding-bottom: 100px;
+    padding-bottom: 100px; /* 3の倍数の画像の下に余白を追加（段落風） */
   }
 
   /* PLAN */
   .plan {
-    background: #d0dfea;
-    padding: 50px 0px;
-    text-align: center;
+    background: #d0dfea; /* 背景維持 */
+    padding: 50px 0px; /* 左右余白を0に（内側のtableに合わせる想定） */
+    text-align: center; /* 中央揃え */
   }
 
   .plan h2 {
-    font-size: 50px;
-    letter-spacing: 6px;
-    margin-bottom: 50px;
-    color: #333;
+    font-size: 50px; /* 見出しサイズ */
+    letter-spacing: 6px; /* 文字間隔 */
+    margin-bottom: 50px; /* 下余白 */
+    color: #333; /* 文字色 */
   }
 
   .plan thead th {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 14px; /* ヘッダーの文字サイズを少し小さく */
+    line-height: 22px; /* 行の高さも詰める */
   }
-  .plan tdody td {
-    font-size: 12px;
+  .plan tbody td {
+    font-size: 12px; /* 本文セルの文字を小さく */
   }
 
   /* SNS */
   .sns {
-    background: #e3f2fd;
-    padding: 200px; /* 上下200px余白 */
+    background: #e3f2fd; /* 背景色を維持 */
+    padding: 200px; /* 余白維持（ビジュアル重視） */
   }
 
   .sns-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* 横並び */
+    justify-content: center; /* 中央揃え */
+    align-items: center; /* 縦中央 */
   }
 
   .sns-item {
-    color: #8c8c8c;
-    overflow: hidden;
-    font-size: 40px;
-    text-decoration: none;
-    display: inline-block;
-    padding: 25px; /* 基本は25px間隔 */
-    width: 185px;
+    color: #8c8c8c; /* アイコン色 */
+    overflow: hidden; /* はみ出し隠し */
+    font-size: 40px; /* アイコンサイズ */
+    text-decoration: none; /* 下線なし */
+    display: inline-block; /* ボックス化 */
+    padding: 25px; /* 余白 */
+    width: 185px; /* 幅 */
   }
 
   .sns-item:hover {
-    transition: 0.5s;
-    background: #fff;
+    transition: 0.5s; /* 変化を滑らかに */
+    background: #fff; /* 背景白に */
   }
 }
 
@@ -412,176 +412,175 @@ body {
    =========================== */
 @media (max-width: 767px) {
   .inner {
-    max-width: 97%; /* 指定があった「SP/TABは97%」にする */
-    box-sizing: border-box; /* padding込みで幅を計算 */
-    margin: 0 auto;
+    max-width: 97%; /* ビューポートの97%幅に */
+    box-sizing: border-box; /* 枠や余白込みで計算 */
+    margin: 0 auto; /* 中央寄せ */
   }
+
   /* ヘッダー */
-  /* Contactボタンは非表示 */
   .btn-contact {
-    display: none;
+    display: none; /* SPではContactボタンを非表示（ハンバーガーに置き換え想定） */
   }
 
   /* ハンバーガーメニュー */
-
   .nav-toggle {
-    display: flex; /*flexで縦並び */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 32px;
-    background: #fff;
+    display: flex; /* SPで表示（縦積みの線3本を内包） */
+    flex-direction: column; /* 子の線を縦に積む */
+    justify-content: center; /* 縦中央（縦積み内での整列） */
+    align-items: center; /* 横中央 */
+    width: 40px; /* ボタン幅 */
+    height: 32px; /* ボタン高さ */
+    background: #fff; /* 背景白 */
     border: 1px solid #ddd; /* 薄い枠線 */
     border-radius: 4px; /* 角丸 */
-    cursor: pointer;
-    padding: 0;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); /* 写真のような薄い影 */
+    cursor: pointer; /* クリック可能カーソル */
+    padding: 0; /* 余白なし（内側はspanのmarginで調整） */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); /* うっすら影 */
   }
 
   .nav-toggle span {
-    display: block;
-    width: 20px;
-    height: 2px;
-    background: #888; /* 写真のように薄めの色 */
-    border-radius: 2px;
-    margin: 3px 0;
+    display: block; /* インラインからブロックに */
+    width: 20px; /* 線の長さ */
+    height: 2px; /* 線の太さ */
+    background: #888; /* 線の色（グレー） */
+    border-radius: 2px; /* 端を丸く */
+    margin: 3px 0; /* 線同士の間隔 */
   }
 
   /* ロゴを少し大きめに */
   .logo i {
-    font-size: 48px;
-    color: #777;
+    font-size: 48px; /* アイコンサイズを拡大 */
+    color: #777; /* 色は同じグレー */
   }
 
   /* Hero セクション */
   .hero {
-    background: url("../img/keyvisual/keyvisual.jpg") no-repeat center/cover;
-    padding: 200px 0; /* 上下200px余白 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    background: url("../img/keyvisual/keyvisual.jpg") no-repeat center/cover; /* 画像背景（cover） */
+    padding: 200px 0; /* 高さをSP向けに縮小 */
+    display: flex; /* 中央配置用 */
+    align-items: center; /* 縦中央 */
+    justify-content: center; /* 横中央 */
+    text-align: center; /* テキスト中央 */
   }
 
   .hero-text h1 {
-    font-size: 40px; /* SP用に縮小 */
-    font-weight: 700;
+    font-size: 40px; /* SPで見出しを小さく */
+    font-weight: 700; /* 太字 */
     color: #6ba7eb; /* 青色 */
   }
 
   .hero-text p {
-    font-size: 30px; /* サブ見出し用 */
-    font-weight: 700;
+    font-size: 30px; /* サブ見出しサイズをSP向けに */
+    font-weight: 700; /* 太字 */
     color: #fff; /* 白色 */
-    margin: 0;
+    margin: 0; /* 余白をリセット */
   }
 
   /* WORK */
-  /* WORKセクション：SPは縦並びに */
   .work-inner {
-    display: block; /* ← flex解除 */
+    display: block; /* 縦並びに変更 */
     text-align: center; /* 中央揃え */
   }
 
   .work-image img {
-    width: 70%; /* 画面幅の7割 */
-    max-width: 250px;
+    width: 70%; /* ビューポートの7割幅 */
+    max-width: 250px; /* 上限幅 */
     margin: 0 auto; /* 中央寄せ */
-    display: block;
-    padding-left: 0;
+    display: block; /* ブロック化 */
+    padding-left: 0; /* 左余白リセット */
   }
 
   .work-text {
-    text-align: center; /* 見出しと文章を中央寄せ */
+    text-align: center; /* テキスト中央寄せ */
   }
 
   .work-text h2 {
-    font-size: 45px;
-    padding-top: 20px;
+    font-size: 45px; /* 見出しサイズ */
+    padding-top: 20px; /* 上余白 */
   }
 
   .work-text p {
-    font-size: 15px;
-    word-break: break-all;
-    text-align: center;
-    padding: 35px 0;
+    font-size: 15px; /* テキストサイズ */
+    word-break: break-all; /* 長い単語の折返し */
+    text-align: center; /* 中央 */
+    padding: 35px 0; /* 上下に余白を確保 */
   }
+
   /* SKILLS */
   .skills {
-    background: #fff;
-    text-align: center;
+    background: #fff; /* 背景白 */
+    text-align: center; /* 中央寄せ */
   }
 
   .skills h2 {
-    font-size: 28px;
-    letter-spacing: 6px;
-    margin-bottom: 30px;
+    font-size: 28px; /* 見出しを小さく */
+    letter-spacing: 6px; /* 文字間隔はやや広め */
+    margin-bottom: 30px; /* 下余白 */
   }
 
   .skills-grid {
-    display: block; /* PCのgridを解除して縦並びに */
+    display: block; /* グリッド解除 → 縦並び */
   }
 
   .skills img {
-    width: 300px;
-    height: 300px;
-    display: block;
-    opacity: 0.7;
+    width: 300px; /* 画像幅 */
+    height: 300px; /* 高さ */
+    display: block; /* ブロック化 */
+    opacity: 0.7; /* 透明度（ホバーで明確化） */
   }
 
   .skills img:hover {
-    opacity: 1;
+    opacity: 1; /* ホバー時に濃く */
   }
 
   .skills img:nth-child(3n) {
-    padding-bottom: 100px;
+    padding-bottom: 100px; /* 3の倍数の画像下に余白（段っぽい見せ方） */
   }
 
   /* PLAN */
   .plan {
-    background: #d0dfea;
-    padding: 50px 0px;
-    text-align: center;
+    background: #d0dfea; /* 背景色 */
+    padding: 50px 0px; /* 左右0でタイトに */
+    text-align: center; /* 中央 */
   }
 
   .plan h2 {
-    font-size: 50px;
-    letter-spacing: 6px;
-    margin-bottom: 50px;
-    color: #333;
+    font-size: 50px; /* 見出しサイズ */
+    letter-spacing: 6px; /* 文字間隔 */
+    margin-bottom: 50px; /* 下余白 */
+    color: #333; /* 文字色 */
   }
 
   .plan thead th {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 14px; /* ヘッダー文字小さめに */
+    line-height: 22px; /* 行高も調整 */
   }
-  .plan tdody td {
-    font-size: 12px;
+  .plan tbody td {
+    font-size: 12px; /* セルの文字サイズを小さく */
   }
 
   /* SNS */
   .sns {
-    padding: 50px 15px;
+    padding: 50px 15px; /* 余白を縮小（スマホでの間延び防止） */
   }
   .sns-inner {
-    flex-direction: column;
-    width: 100%;
-    gap: 0;
+    flex-direction: column; /* 縦並びに変更 */
+    width: 100%; /* 幅いっぱい */
+    gap: 0; /* すき間なし（paddingで調整） */
   }
   .sns-item {
-    font-size: 40px;
-    padding: 50px;
+    font-size: 40px; /* アイコンサイズ */
+    padding: 50px; /* クリック領域を広めに */
   }
 
   .sns-item:hover {
-    transition: 0.5s;
-    background: #fff;
+    transition: 0.5s; /* 変化を滑らかに */
+    background: #fff; /* 背景白 */
   }
 
   /* Footer */
   .footer-inner {
-    text-align: right;
-    padding-right: 10px;
+    text-align: right; /* テキスト右寄せ */
+    padding-right: 10px; /* 右に余白 */
   }
 }
